@@ -66,103 +66,109 @@ namespace NLHospital
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.btnLogin = new System.Windows.Forms.Button();
-			this.btnExit = new System.Windows.Forms.Button();
-			this.txtUserID = new System.Windows.Forms.TextBox();
-			this.txtPassword = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.lblUserID = new System.Windows.Forms.Label();
-			this.lblPassword = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.SuspendLayout();
-			// 
-			// btnLogin
-			// 
-			this.btnLogin.Location = new System.Drawing.Point(40, 216);
-			this.btnLogin.Name = "btnLogin";
-			this.btnLogin.TabIndex = 0;
-			this.btnLogin.Text = "Login";
-			this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-			// 
-			// btnExit
-			// 
-			this.btnExit.Location = new System.Drawing.Point(184, 216);
-			this.btnExit.Name = "btnExit";
-			this.btnExit.TabIndex = 1;
-			this.btnExit.Text = "Exit";
-			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-			// 
-			// txtUserID
-			// 
-			this.txtUserID.Location = new System.Drawing.Point(160, 120);
-			this.txtUserID.Name = "txtUserID";
-			this.txtUserID.TabIndex = 2;
-			this.txtUserID.Text = "";
-			// 
-			// txtPassword
-			// 
-			this.txtPassword.Location = new System.Drawing.Point(160, 160);
-			this.txtPassword.Name = "txtPassword";
-			this.txtPassword.TabIndex = 3;
-			this.txtPassword.Text = "";
-			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(56, 16);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(192, 24);
-			this.label1.TabIndex = 4;
-			this.label1.Text = "Northern Lights Hospital";
-			this.label1.Click += new System.EventHandler(this.label1_Click);
-			// 
-			// lblUserID
-			// 
-			this.lblUserID.Location = new System.Drawing.Point(24, 120);
-			this.lblUserID.Name = "lblUserID";
-			this.lblUserID.TabIndex = 5;
-			this.lblUserID.Text = "User ID Name:";
-			// 
-			// lblPassword
-			// 
-			this.lblPassword.Location = new System.Drawing.Point(24, 160);
-			this.lblPassword.Name = "lblPassword";
-			this.lblPassword.TabIndex = 6;
-			this.lblPassword.Text = "Password:";
-			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(24, 88);
-			this.label2.Name = "label2";
-			this.label2.TabIndex = 7;
-			this.label2.Text = "Please log in:";
-			// 
-			// label3
-			// 
-			this.label3.Location = new System.Drawing.Point(72, 48);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(144, 23);
-			this.label3.TabIndex = 8;
-			this.label3.Text = "Patient Admissions";
-			// 
-			// frmNLHospital
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(288, 266);
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.label3,
-																		  this.label2,
-																		  this.lblPassword,
-																		  this.lblUserID,
-																		  this.label1,
-																		  this.txtPassword,
-																		  this.txtUserID,
-																		  this.btnExit,
-																		  this.btnLogin});
-			this.Name = "frmNLHospital";
-			this.Text = "frmNLHospital";
-			this.Load += new System.EventHandler(this.frmNLHospital_Load);
-			this.ResumeLayout(false);
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.txtUserID = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblUserID = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(40, 216);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 0;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(184, 216);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // txtUserID
+            // 
+            this.txtUserID.Location = new System.Drawing.Point(160, 120);
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.Size = new System.Drawing.Size(100, 20);
+            this.txtUserID.TabIndex = 2;
+            this.txtUserID.TextChanged += new System.EventHandler(this.txtUserID_TextChanged);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(160, 160);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(56, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(192, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Northern Lights Hospital";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblUserID
+            // 
+            this.lblUserID.Location = new System.Drawing.Point(24, 120);
+            this.lblUserID.Name = "lblUserID";
+            this.lblUserID.Size = new System.Drawing.Size(100, 23);
+            this.lblUserID.TabIndex = 5;
+            this.lblUserID.Text = "User ID Name:";
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.Location = new System.Drawing.Point(24, 160);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(100, 23);
+            this.lblPassword.TabIndex = 6;
+            this.lblPassword.Text = "Password:";
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(24, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Please log in:";
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(72, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 23);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Patient Admissions";
+            // 
+            // frmNLHospital
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(288, 266);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblUserID);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUserID);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnLogin);
+            this.Name = "frmNLHospital";
+            this.Text = "frmNLHospital";
+            this.Load += new System.EventHandler(this.frmNLHospital_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 		#endregion
@@ -256,5 +262,10 @@ namespace NLHospital
 				Application.Exit ();
 			}
 		}
-	}
+
+        private void txtUserID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

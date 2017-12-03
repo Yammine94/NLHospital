@@ -1,0 +1,8 @@
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHBaseWindow\bin\Debug\NLHBaseWindow.dll
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHBaseWindow\bin\Debug\NLHBaseWindow.pdb
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHBaseWindow\obj\Debug\NLHBaseWindow.csprojResolveAssemblyReference.cache
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHBaseWindow\obj\Debug\NLHBaseWindow.NLHBase.resources
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHBaseWindow\obj\Debug\NLHBaseWindow.csproj.GenerateResource.Cache
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHBaseWindow\obj\Debug\NLHBaseWindow.csproj.CoreCompileInputs.cache
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHBaseWindow\obj\Debug\NLHBaseWindow.dll
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHBaseWindow\obj\Debug\NLHBaseWindow.pdb

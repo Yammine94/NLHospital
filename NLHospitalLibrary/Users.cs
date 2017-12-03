@@ -69,8 +69,8 @@ namespace NLHospitalLibrary
 		private void InitializeConnection()
 		{
 			m_oCn = new SqlConnection(
-				@"Data Source=(local);Integrated Security=SSPI;" 
-				+ "Initial Catalog=NLHospital");
+                @"Data Source=(local);Initial Catalog = NLHospital"
+                + "Integrated Security=true;");
 		}
 	}
 }

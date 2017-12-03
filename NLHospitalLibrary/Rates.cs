@@ -82,7 +82,7 @@ namespace NLHospitalLibrary
 
 				if (thisDataSet.Tables ["Extras_Rates"].Rows[n]["Extras_Name"].ToString () == "Private")
 				{
-					PrivateRate = thisDataSet.Tables ["Extras_Rates"].Rows[n]["DailyCost"];
+					PrivateRate = Convert.ToDecimal (thisDataSet.Tables ["Extras_Rates"].Rows[n]["DailyCost"]);
 				}
 			}
 

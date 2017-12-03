@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using System.Data ;
 using System.Data .SqlClient ;
 using NLHospitalLibrary;
-
+using NLHBaseWindow;
 
 
 namespace NLHospital

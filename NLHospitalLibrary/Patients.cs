@@ -198,7 +198,7 @@ namespace NLHospitalLibrary
 			string insCo, string insNum, string kin, string kinRel, string doc)
 		{
 			string sMsg = "";
-			DateTime dob = birth;
+			DateTime dob = Convert.ToDateTime(birth);
 
 			try
 			{

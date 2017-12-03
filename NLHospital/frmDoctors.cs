@@ -282,7 +282,12 @@ namespace NLHospital
 			LoadSpecialtyData();
 		}
 
-		private void LoadDoctorData()
+        private void LoadSpecialtyData()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void LoadDoctorData()
 		{
 			Doctors oDoctor = new Doctors();
 			dgDoctors.DataBindings.Clear();
