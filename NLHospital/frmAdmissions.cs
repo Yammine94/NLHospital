@@ -32,5 +32,40 @@ namespace NLHospital
             }
             
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string ID = textBox2.Text;
+            Admissions admin = new Admissions();
+            try
+            {
+                DataSet tableSource = admin.FindData(ID);
+                dataGridView1.DataSource = tableSource.Tables[0];
+            }
+            catch
+            {
+                MessageBox.Show("No Record Found with that ID");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string ID = textBox1.Text;
+            Admissions admin = new Admissions();
+            try
+            {
+                int days = admin.GetDays(ID);
+                MessageBox.Show("Patient ID " + ID + " has spent " + days + " days in hospital care.");
+            }
+            catch
+            {
+                MessageBox.Show("No Record Found with that ID");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
     }

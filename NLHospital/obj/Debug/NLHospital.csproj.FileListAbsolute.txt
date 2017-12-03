@@ -14,3 +14,5 @@ C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospital\bin\Debug\NLHospi
 C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospital\bin\Debug\NLHBaseWindow.pdb
 C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospital\bin\Debug\NLHospitalLibrary.pdb
 C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospital\obj\Debug\NLHospital.frmAdmissions.resources
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospital\obj\Debug\NLHospital.SurgeryReport.resources
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospital\obj\Debug\NLHospital.PatientList.resources

@@ -126,6 +126,18 @@
     <Compile Include="frmNLHospital.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PatientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientList.Designer.cs">
+      <DependentUpon>PatientList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SurgeryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SurgeryReport.Designer.cs">
+      <DependentUpon>SurgeryReport.cs</DependentUpon>
+    </Compile>
     <Content Include="App.ico" />
     <EmbeddedResource Include="frmAdmissions.resx">
       <DependentUpon>frmAdmissions.cs</DependentUpon>
@@ -141,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNLHospital.resx">
       <DependentUpon>frmNLHospital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientList.resx">
+      <DependentUpon>PatientList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SurgeryReport.resx">
+      <DependentUpon>SurgeryReport.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

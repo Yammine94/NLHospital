@@ -193,7 +193,27 @@ namespace NLHospitalLibrary
 			return foundDataSet;
 		}
 
-		public string UpdateData(string ID, string LN, string FN, string birth,
+        public DataSet ListPatients()
+        {
+            InitializeConnection();
+            m_oCn.Open();
+            DataSet thisDataSet = new DataSet();
+            try
+            {
+                m_oDA.Fill(thisDataSet, m_sClassName);
+            }
+            catch
+            {
+            }
+            finally
+            {
+                m_oCn.Close();
+                m_oCn = null;
+            }
+            return thisDataSet;
+        }
+
+        public string UpdateData(string ID, string LN, string FN, string birth,
 			string address, string city, string prov, string post, string phone, 
 			string insCo, string insNum, string kin, string kinRel, string doc)
 		{

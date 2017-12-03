@@ -36,12 +36,10 @@ namespace NLHospital
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +80,7 @@ namespace NLHospital
             this.button2.TabIndex = 3;
             this.button2.Text = "Get Dates By ID";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -91,15 +90,7 @@ namespace NLHospital
             this.button3.TabIndex = 4;
             this.button3.Text = "Find Record By ID";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(285, 325);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Set Discharge Date";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
@@ -131,24 +122,15 @@ namespace NLHospital
             this.textBox1.Size = new System.Drawing.Size(92, 20);
             this.textBox1.TabIndex = 12;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(177, 327);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(92, 20);
-            this.textBox3.TabIndex = 13;
-            // 
             // frmAdmissions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 392);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -179,11 +161,9 @@ namespace NLHospital
         private Button button1;
         private Button button2;
         private Button button3;
-        private Button button4;
         private Label label2;
         private Label label4;
         private TextBox textBox2;
         private TextBox textBox1;
-        private TextBox textBox3;
     }
 }

@@ -89,22 +89,23 @@ namespace NLHospitalLibrary
 			InitializeConnection();
 			m_oCn.Open();
 
-			DataSet thisDataSet = new DataSet ();
-
-			try
+		
+            string sqlDate = "Update AdmissionRecords SET DischargeDate = @date where PatientID = @id;";
+            string sqlBed = "Update Beds SET Occupied = 0 from Beds INNER JOIN AdmissionRecords ON [AdmissionRecords].BedNumber = [Beds].BedNumber WHERE [AdmissionRecords].BedNumber = [Beds].BedNumber AND  [AdmissionRecords].PatientID = @id ";
+            SqlCommand cmdDate = new SqlCommand(sqlDate, m_oCn);
+            SqlCommand cmdBed = new SqlCommand(sqlBed, m_oCn);
+            cmdBed.Parameters.AddWithValue("@id", ID);
+            cmdDate.Parameters.Add("@date", SqlDbType.DateTime2).Value = DateTime.Today.Date;
+            cmdDate.Parameters.AddWithValue("@id", ID);
+            try
 			{
-				m_oDA.Fill (thisDataSet, m_sClassName);
-				for (int n = 0; n < thisDataSet.Tables["AdmissionRecords"].Rows.Count ; n++)
-				{
-					if (thisDataSet.Tables["AdmissionRecords"].Rows[n]["PatientID"].ToString () == ID)
-					{
-						thisDataSet.Tables["AdmissionRecords"].Rows[n]["DischargeDate"] = DateTime.Today.Date;
-					}
-				}
-			}
+                cmdBed.ExecuteNonQuery();
+                cmdDate.ExecuteNonQuery();
+            }
 			catch 
 			{
-			}
+                
+            }
 			finally
 			{
 				m_oCn.Close();

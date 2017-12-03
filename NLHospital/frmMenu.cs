@@ -199,6 +199,7 @@ namespace NLHospital
             this.btnSurgery.Size = new System.Drawing.Size(136, 23);
             this.btnSurgery.TabIndex = 2;
             this.btnSurgery.Text = "Surgery Report";
+            this.btnSurgery.Click += new System.EventHandler(this.btnSurgery_Click);
             // 
             // btnDischarge
             // 
@@ -247,6 +248,7 @@ namespace NLHospital
             this.button1.Size = new System.Drawing.Size(136, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Patient List";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnForSurgery
             // 
@@ -255,6 +257,7 @@ namespace NLHospital
             this.btnForSurgery.Size = new System.Drawing.Size(136, 23);
             this.btnForSurgery.TabIndex = 1;
             this.btnForSurgery.Text = "Surgery Report";
+            this.btnForSurgery.Click += new System.EventHandler(this.btnForSurgery_Click);
             // 
             // lblNurses
             // 
@@ -379,9 +382,21 @@ namespace NLHospital
 
 		private void btnDischarge_Click(object sender, System.EventArgs e)
 		{
+            Admissions admin = new Admissions();
+            
+                if (txtPatientID.Text.Length > 0)
+                {
+                    admin.SetPatientDischarge(txtPatientID.Text);
+                    MessageBox.Show("Patient discharge date recorded and bed has been set as unoccupied.");
+                    txtPatientID.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Patient ID entered is not valid.");
+                }
+            
 
-
-		}
+        }
 
 		private void btnBilling_Click(object sender, System.EventArgs e)
 		{
@@ -400,6 +415,27 @@ namespace NLHospital
             frmAdmissions admissionsForm = new frmAdmissions();
             admissionsForm.Visible = true;
             admissionsForm.Activate();
+        }
+
+        private void btnSurgery_Click(object sender, EventArgs e)
+        {
+            SurgeryReport surg = new SurgeryReport();
+            surg.Visible = true;
+            surg.Activate();
+        }
+
+        private void btnForSurgery_Click(object sender, EventArgs e)
+        {
+            SurgeryReport surg = new SurgeryReport();
+            surg.Visible = true;
+            surg.Activate();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PatientList list = new PatientList();
+            list.Visible = true;
+            list.Activate();
         }
     }
 }
