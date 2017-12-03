@@ -127,6 +127,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Content Include="App.ico" />
+    <EmbeddedResource Include="frmAdmissions.resx">
+      <DependentUpon>frmAdmissions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBillPatient.resx">
       <DependentUpon>frmBillPatient.cs</DependentUpon>
     </EmbeddedResource>

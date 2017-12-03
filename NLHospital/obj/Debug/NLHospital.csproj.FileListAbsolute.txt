@@ -13,3 +13,4 @@ C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospital\bin\Debug\NLHBase
 C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospital\bin\Debug\NLHospitalLibrary.dll
 C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospital\bin\Debug\NLHBaseWindow.pdb
 C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospital\bin\Debug\NLHospitalLibrary.pdb
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospital\obj\Debug\NLHospital.frmAdmissions.resources

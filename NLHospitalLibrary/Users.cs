@@ -1,7 +1,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient ;
-
+using System.Diagnostics;
 namespace NLHospitalLibrary
 {
 	/// <summary>
@@ -23,7 +23,7 @@ namespace NLHospitalLibrary
 
 			InitializeConnection();
 
-			sSQL = "SELECT UserName, Pasword FROM Login " ;
+			sSQL = "SELECT UserName, Password FROM Login " ;
 			oSelCmd = null;
 			oSelCmd = new SqlCommand(sSQL, m_oCn);
 			oSelCmd.CommandType = CommandType.Text;
@@ -39,6 +39,7 @@ namespace NLHospitalLibrary
 		{
 			InitializeConnection();
 			m_oCn.Open();
+    
 			DataSet thisDataSet = new DataSet();
 			DataSet foundDataSet = new DataSet();
 			try
@@ -48,7 +49,7 @@ namespace NLHospitalLibrary
 				{
 					if (thisDataSet.Tables["Login"].Rows[n]["UserName"].ToString () == ID)
 					{
-						if (thisDataSet.Tables["Login"].Rows[n]["Pasword"].ToString () == pass)
+						if (thisDataSet.Tables["Login"].Rows[n]["Password"].ToString () == pass)
 						{
 							m_oDA.Fill(foundDataSet,n,1,"Login");							
 						}
@@ -57,7 +58,8 @@ namespace NLHospitalLibrary
 			}
 			catch 
 			{
-			}
+                Debug.WriteLine("There is no Data in this set");
+            }
 			finally
 			{
 				m_oCn.Close();
@@ -66,11 +68,12 @@ namespace NLHospitalLibrary
 			return foundDataSet;
 		}
 
+       
+
 		private void InitializeConnection()
 		{
 			m_oCn = new SqlConnection(
-                @"Data Source=(local);Initial Catalog = NLHospital"
-                + "Integrated Security=true;");
+                "Data Source=DESKTOP-CBDVJLK;Initial Catalog=NLHospital;Integrated Security=True");
 		}
 	}
 }

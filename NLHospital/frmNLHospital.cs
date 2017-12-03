@@ -30,9 +30,9 @@ namespace NLHospital
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
-		static int cnt = 0;
-	        
-		public frmNLHospital()
+        static int cnt = 0;
+
+        public frmNLHospital()
 		{
 			//
 			// Required for Windows Form Designer support
@@ -207,48 +207,52 @@ namespace NLHospital
 			string strUser;
 			string strPass;
 			string sMsg = "";
+            cnt += 1;
 
-			strUser = txtUserID.Text ;
+            strUser = txtUserID.Text ;
 			strPass = txtPassword.Text ;
 
-			DataSet o_Find = new DataSet ();
-			Users oUsers = new Users();
+            DataSet o_Find = new DataSet();
+            Users oUsers = new Users();
+           
 
-			try
+            try
 			{
-				o_Find = oUsers.FindData(strUser,strPass);
-				sMsg = "Welcome " + o_Find.Tables ["Login"].Rows[0]["UserName"].ToString ();
-				
-				switch (strUser)
-				{
-					case "Admissions":
-						frmAdmissions admitForm = new frmAdmissions ();
-						admitForm.Visible = true;
-						admitForm.Activate();
-						break;
-					case "Admin":
-					case "Nurse":
-					case "Doctor":
-						frmMenu menuForm = new frmMenu ();
-						menuForm.oCurrent.UserName = strUser;
-						menuForm.Visible = true;
-						menuForm.Activate();
-						menuForm.SelectUser();
-						break;
-				}
 
-			}
-			
-			catch
+                o_Find = oUsers.FindData(strUser, strPass);
+
+                sMsg = "Welcome " + o_Find.Tables["Login"].Rows[0]["UserName"].ToString();
+
+                switch (strUser)
+                {
+                    case "Admissions":
+                        frmAdmissions admitForm = new frmAdmissions();
+                        admitForm.Visible = true;
+                        admitForm.Activate();
+                        break;
+                    case "Admin":
+                    case "Nurse":
+                    case "Doctor":
+                        frmMenu menuForm = new frmMenu();
+                        menuForm.oCurrent.UserName = strUser;
+                        menuForm.Visible = true;
+                        menuForm.Activate();
+                        menuForm.SelectUser();
+                        break;
+                }
+            }
+
+            catch
 			{
-				if (cnt == 0)
-					sMsg = "User not in database. Please try again.";
-				if (cnt == 1)
-					sMsg = "User not in database. One try left.";
-				if (cnt == 2)
-					sMsg = "Application is closing. Please contact your supervisor.";
-				txtUserID.Text = "";
-				txtPassword.Text = "";
+                if (cnt == 0)
+                    sMsg = "User not in database. Please try again.";
+                if (cnt == 1)
+                    sMsg = "User not in database. One try left.";
+                if (cnt == 2)
+                    sMsg = "Application is closing. Please contact your supervisor.";
+                txtUserID.Text = "";
+                txtPassword.Text = "";
+                MessageBox.Show("not Connect");
 			}
 			finally
 			{
@@ -256,12 +260,12 @@ namespace NLHospital
 				txtUserID.Text = "";
 				txtPassword.Text = "";
 			}
-	
-			if (cnt > 2)
-			{
-				Application.Exit ();
-			}
-		}
+
+            if (cnt > 2)
+            {
+                Application.Exit();
+            }
+        }
 
         private void txtUserID_TextChanged(object sender, EventArgs e)
         {
