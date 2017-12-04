@@ -29,7 +29,7 @@ namespace NLHospitalLibrary
 
 			InitializeConnection();
 
-			sSQL = "SELECT Extras_Name, DailyCost FROM Extras_Rates " ;
+			sSQL = "SELECT AmenityName, DailyCost FROM Extras_Rates " ;
 			oSelCmd = null;
 			oSelCmd = new SqlCommand(sSQL, m_oCn);
 			oSelCmd.CommandType = CommandType.Text;
@@ -64,22 +64,22 @@ namespace NLHospitalLibrary
 			for (int n = 0; n < thisDataSet.Tables["Extras_Rates"].Rows.Count ; n++)
 			{
 				
-				if (thisDataSet.Tables ["Extras_Rates"].Rows[n]["Extras_Name"].ToString () == "TV")
+				if (thisDataSet.Tables ["Extras_Rates"].Rows[n]["AmenityName"].ToString () == "TV")
 				{
 					TVRate = Convert.ToDecimal (thisDataSet.Tables ["Extras_Rates"].Rows[n]["DailyCost"]);
 				}
 
-				if (thisDataSet.Tables ["Extras_Rates"].Rows[n]["Extras_Name"].ToString () == "Phone")
+				if (thisDataSet.Tables ["Extras_Rates"].Rows[n]["AmenityName"].ToString () == "Phone")
 				{
 					PhoneRate = Convert.ToDecimal (thisDataSet.Tables ["Extras_Rates"].Rows[n]["DailyCost"]);
 				}
 
-				if (thisDataSet.Tables ["Extras_Rates"].Rows[n]["ExtrasName"].ToString () == "Semi")
+				if (thisDataSet.Tables ["Extras_Rates"].Rows[n]["AmenityName"].ToString () == "Semi")
 				{
 					SemiRate = Convert.ToDecimal (thisDataSet.Tables ["Extras_Rates"].Rows[n]["DailyCost"]);
 				}
 
-				if (thisDataSet.Tables ["Extras_Rates"].Rows[n]["Extras_Name"].ToString () == "Private")
+				if (thisDataSet.Tables ["Extras_Rates"].Rows[n]["AmenityName"].ToString () == "Private")
 				{
 					PrivateRate = Convert.ToDecimal (thisDataSet.Tables ["Extras_Rates"].Rows[n]["DailyCost"]);
 				}

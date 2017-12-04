@@ -306,8 +306,8 @@ namespace NLHospitalLibrary
 			pFirst = pDataSet.Tables["Patients"].Rows[0]["FirstName"].ToString ();
 			pAddress = pDataSet.Tables["Patients"].Rows[0]["Address"].ToString ();			
 			pCity = pDataSet.Tables["Patients"].Rows[0]["City"].ToString ();
-			pProv = pDataSet.Tables["Patients"].Rows[0]["City"].ToString ();
-			pPost = pDataSet.Tables["Patients"].Rows[0]["City"].ToString ();
+			pProv = pDataSet.Tables["Patients"].Rows[0]["Province"].ToString ();
+			pPost = pDataSet.Tables["Patients"].Rows[0]["PostalCode"].ToString ();
 		}
 	}
 }

@@ -122,8 +122,8 @@ namespace NLHospitalLibrary
 			DataSet thisDataSet = new DataSet();
 			thisDataSet = this.FindData (ID);
 
-			ad = Convert.ToDateTime (thisDataSet.Tables["Admissions"].Rows [0]["AdmitDate"]);
-			dis = Convert.ToDateTime (thisDataSet.Tables["Admissions"].Rows [0]["DischargeDate"]);
+			ad = Convert.ToDateTime (thisDataSet.Tables["AdmissionRecords"].Rows [0]["AdmitDate"]);
+			dis = Convert.ToDateTime (thisDataSet.Tables["AdmissionRecords"].Rows [0]["DischargeDate"]);
 			
 			days = dis.Day - ad.Day;
 
