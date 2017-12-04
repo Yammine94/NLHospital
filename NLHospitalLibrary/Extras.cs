@@ -81,8 +81,7 @@ namespace NLHospitalLibrary
 		private void InitializeConnection()
 		{
 			m_oCn = new SqlConnection(
-				@"Data Source=(local);Integrated Security=SSPI;" 
-				+ "Initial Catalog=NLHospital");
+                "Data Source=DESKTOP-CBDVJLK;Initial Catalog=NLHospital;Integrated Security=True");
 		}
 
 		public string AddData(string aID, string pID, bool tv, 

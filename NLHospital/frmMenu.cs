@@ -226,7 +226,7 @@ namespace NLHospital
             this.pnlNurses.Controls.Add(this.button1);
             this.pnlNurses.Controls.Add(this.btnForSurgery);
             this.pnlNurses.Controls.Add(this.lblNurses);
-            this.pnlNurses.Location = new System.Drawing.Point(16, 136);
+            this.pnlNurses.Location = new System.Drawing.Point(16, 134);
             this.pnlNurses.Name = "pnlNurses";
             this.pnlNurses.Size = new System.Drawing.Size(320, 120);
             this.pnlNurses.TabIndex = 3;
