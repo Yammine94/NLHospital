@@ -40,6 +40,7 @@ namespace NLHospital
         private Label label5;
         private Button button3;
         private Label label6;
+        private Button button2;
         public CurrentUser oCurrent = new CurrentUser();
 
 		public frmMenu()
@@ -98,6 +99,7 @@ namespace NLHospital
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlAdministrator.SuspendLayout();
             this.pnlDoctors.SuspendLayout();
             this.pnlNurses.SuspendLayout();
@@ -280,6 +282,7 @@ namespace NLHospital
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label6);
@@ -302,7 +305,7 @@ namespace NLHospital
             // 
             this.button3.Location = new System.Drawing.Point(8, 80);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(176, 23);
+            this.button3.Size = new System.Drawing.Size(144, 23);
             this.button3.TabIndex = 1;
             this.button3.Text = "View/Manage Admissions";
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -317,6 +320,15 @@ namespace NLHospital
             this.label6.TabIndex = 0;
             this.label6.Text = "Admissions";
             this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(168, 80);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Manage Patients";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmMenu
             // 
@@ -436,6 +448,13 @@ namespace NLHospital
             PatientList list = new PatientList();
             list.Visible = true;
             list.Activate();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 managePatients = new Form1();
+            managePatients.Visible = true;
+            managePatients.Activate();
         }
     }
 }

@@ -1,6 +1,6 @@
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospitalLibrary\bin\Debug\NLHospitalLibrary.dll
+C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospitalLibrary\bin\Debug\NLHospitalLibrary.pdb
 C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospitalLibrary\obj\Debug\NLHospitalLibrary.csprojResolveAssemblyReference.cache
 C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospitalLibrary\obj\Debug\NLHospitalLibrary.csproj.CoreCompileInputs.cache
 C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospitalLibrary\obj\Debug\NLHospitalLibrary.dll
-C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospitalLibrary\bin\Debug\NLHospitalLibrary.dll
-C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospitalLibrary\bin\Debug\NLHospitalLibrary.pdb
 C:\Users\georg\Desktop\gggggg\NLH\NLHospital-System\NLHospitalLibrary\obj\Debug\NLHospitalLibrary.pdb

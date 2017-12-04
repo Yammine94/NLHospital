@@ -15,7 +15,7 @@ namespace NLHospital
 	public class frmDoctors : NLHBase
 	{
 		private System.Windows.Forms.Button btnQuit;
-		private System.Windows.Forms.DataGrid dgDoctors;
+		private System.Windows.Forms.DataGrid dgPatients;
 		private System.Windows.Forms.Button btnSave;
 		/// <summary>
 		/// Required designer variable.
@@ -31,12 +31,12 @@ namespace NLHospital
 		private System.Windows.Forms.TextBox txtFirstName;
 		private System.Windows.Forms.TextBox txtLastName;
 		private System.Windows.Forms.TextBox txtDoctorID;
-		private System.Windows.Forms.ComboBox cboSpecialty;
 		private System.Windows.Forms.Button btnAdd;
 		private System.Windows.Forms.Button btnFind;
 		private System.Windows.Forms.Button btnUpdate;
 		private System.Windows.Forms.Button btnDelete;
-		DataSet m_oSP = new DataSet();
+        private ComboBox cboSpecialty;
+        DataSet m_oSP = new DataSet();
 
 		public frmDoctors()
 		{
@@ -73,14 +73,13 @@ namespace NLHospital
 		private void InitializeComponent()
 		{
             this.btnQuit = new System.Windows.Forms.Button();
-            this.dgDoctors = new System.Windows.Forms.DataGrid();
+            this.dgPatients = new System.Windows.Forms.DataGrid();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.cboSpecialty = new System.Windows.Forms.ComboBox();
             this.lblSpecialty = new System.Windows.Forms.Label();
             this.lblFName = new System.Windows.Forms.Label();
             this.lblLName = new System.Windows.Forms.Label();
@@ -88,7 +87,8 @@ namespace NLHospital
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtDoctorID = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgDoctors)).BeginInit();
+            this.cboSpecialty = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPatients)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,32 +101,33 @@ namespace NLHospital
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
-            // dgDoctors
+            // dgPatients
             // 
-            this.dgDoctors.AlternatingBackColor = System.Drawing.Color.LightGray;
-            this.dgDoctors.BackColor = System.Drawing.Color.Gainsboro;
-            this.dgDoctors.BackgroundColor = System.Drawing.Color.Silver;
-            this.dgDoctors.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgDoctors.CaptionBackColor = System.Drawing.Color.LightSteelBlue;
-            this.dgDoctors.CaptionForeColor = System.Drawing.Color.MidnightBlue;
-            this.dgDoctors.DataMember = "";
-            this.dgDoctors.FlatMode = true;
-            this.dgDoctors.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.dgDoctors.ForeColor = System.Drawing.Color.Black;
-            this.dgDoctors.GridLineColor = System.Drawing.Color.DimGray;
-            this.dgDoctors.GridLineStyle = System.Windows.Forms.DataGridLineStyle.None;
-            this.dgDoctors.HeaderBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgDoctors.HeaderFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.dgDoctors.HeaderForeColor = System.Drawing.Color.White;
-            this.dgDoctors.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.dgDoctors.Location = new System.Drawing.Point(24, 8);
-            this.dgDoctors.Name = "dgDoctors";
-            this.dgDoctors.ParentRowsBackColor = System.Drawing.Color.DarkGray;
-            this.dgDoctors.ParentRowsForeColor = System.Drawing.Color.Black;
-            this.dgDoctors.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            this.dgDoctors.SelectionForeColor = System.Drawing.Color.White;
-            this.dgDoctors.Size = new System.Drawing.Size(331, 200);
-            this.dgDoctors.TabIndex = 7;
+            this.dgPatients.AlternatingBackColor = System.Drawing.Color.LightGray;
+            this.dgPatients.BackColor = System.Drawing.Color.Gainsboro;
+            this.dgPatients.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgPatients.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgPatients.CaptionBackColor = System.Drawing.Color.LightSteelBlue;
+            this.dgPatients.CaptionForeColor = System.Drawing.Color.MidnightBlue;
+            this.dgPatients.DataMember = "";
+            this.dgPatients.FlatMode = true;
+            this.dgPatients.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.dgPatients.ForeColor = System.Drawing.Color.Black;
+            this.dgPatients.GridLineColor = System.Drawing.Color.DimGray;
+            this.dgPatients.GridLineStyle = System.Windows.Forms.DataGridLineStyle.None;
+            this.dgPatients.HeaderBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgPatients.HeaderFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.dgPatients.HeaderForeColor = System.Drawing.Color.White;
+            this.dgPatients.LinkColor = System.Drawing.Color.MidnightBlue;
+            this.dgPatients.Location = new System.Drawing.Point(24, 8);
+            this.dgPatients.Name = "dgPatients";
+            this.dgPatients.ParentRowsBackColor = System.Drawing.Color.DarkGray;
+            this.dgPatients.ParentRowsForeColor = System.Drawing.Color.Black;
+            this.dgPatients.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            this.dgPatients.SelectionForeColor = System.Drawing.Color.White;
+            this.dgPatients.Size = new System.Drawing.Size(331, 200);
+            this.dgPatients.TabIndex = 7;
+            this.dgPatients.Navigate += new System.Windows.Forms.NavigateEventHandler(this.dgDoctors_Navigate);
             // 
             // btnSave
             // 
@@ -192,13 +193,6 @@ namespace NLHospital
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
-            // cboSpecialty
-            // 
-            this.cboSpecialty.Location = new System.Drawing.Point(88, 80);
-            this.cboSpecialty.Name = "cboSpecialty";
-            this.cboSpecialty.Size = new System.Drawing.Size(168, 21);
-            this.cboSpecialty.TabIndex = 27;
-            // 
             // lblSpecialty
             // 
             this.lblSpecialty.AutoSize = true;
@@ -259,18 +253,25 @@ namespace NLHospital
             this.txtDoctorID.Size = new System.Drawing.Size(100, 20);
             this.txtDoctorID.TabIndex = 20;
             // 
+            // cboSpecialty
+            // 
+            this.cboSpecialty.Location = new System.Drawing.Point(88, 80);
+            this.cboSpecialty.Name = "cboSpecialty";
+            this.cboSpecialty.Size = new System.Drawing.Size(168, 21);
+            this.cboSpecialty.TabIndex = 27;
+            // 
             // frmDoctors
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(544, 398);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dgDoctors);
+            this.Controls.Add(this.dgPatients);
             this.Controls.Add(this.btnQuit);
             this.Name = "frmDoctors";
             this.Text = "Doctors";
             this.Load += new System.EventHandler(this.frmDoctors_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgDoctors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPatients)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -297,9 +298,9 @@ namespace NLHospital
         private void LoadDoctorData()
 		{
 			Doctors oDoctor = new Doctors();
-			dgDoctors.DataBindings.Clear();
+			dgPatients.DataBindings.Clear();
 			m_oDS = oDoctor.GetData();
-			dgDoctors.DataSource = m_oDS.Tables["Doctors"];
+			dgPatients.DataSource = m_oDS.Tables["Doctors"];
 		}
 
 
@@ -363,7 +364,7 @@ namespace NLHospital
 			try
 			{
 				o_Find = oDoctors.FindData(docID);
-                dgDoctors.DataSource = o_Find.Tables[0];
+                dgPatients.DataSource = o_Find.Tables[0];
 			}
 			catch
 			{
@@ -433,5 +434,14 @@ namespace NLHospital
 			this.Close ();
 		}
 
-	}
+        private void dgDoctors_Navigate(object sender, NavigateEventArgs ne)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

@@ -222,18 +222,34 @@ namespace NLHospital
                 o_Find = oUsers.FindData(strUser, strPass);
 
                 sMsg = "Welcome " + o_Find.Tables["Login"].Rows[0]["UserName"].ToString();
-
+                frmMenu menuForm = new frmMenu();
                 switch (strUser)
                 {
+                    
                     case "Admissions":
-                        frmAdmissions admitForm = new frmAdmissions();
-                        admitForm.Visible = true;
-                        admitForm.Activate();
+                        
+                        menuForm.oCurrent.UserName = strUser;
+                        menuForm.Visible = true;
+                        menuForm.Activate();
+                        menuForm.SelectUser();
                         break;
+                        
                     case "Admin":
+                        
+                        menuForm.oCurrent.UserName = strUser;
+                        menuForm.Visible = true;
+                        menuForm.Activate();
+                        menuForm.SelectUser();
+                        break;
                     case "Nurse":
+                        
+                        menuForm.oCurrent.UserName = strUser;
+                        menuForm.Visible = true;
+                        menuForm.Activate();
+                        menuForm.SelectUser();
+                        break;
                     case "Doctor":
-                        frmMenu menuForm = new frmMenu();
+                        
                         menuForm.oCurrent.UserName = strUser;
                         menuForm.Visible = true;
                         menuForm.Activate();
